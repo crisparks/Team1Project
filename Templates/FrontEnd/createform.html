@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Merit Banking</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+	<div id="header">
+		<h1>Merit Banking Services<span class="style1"></h1>
+    	<h2>Your Number One Bank</h2>
+	</div>
+
+	<!--Navbar-->
+<div id="navigation">
+    	<ul>
+    		<li><a href="createform.html">NEW ACCOUNT</a></li>
+    		<li><a href="login.jsp">LOGIN</a></li>
+    		<li><a href="locations.jsp">LOCATIONS</a></li>
+    		<li><a href="about.jsp">ABOUT US</a></li>
+    		<li><a href="contact.jsp">CONTACT US </a></li>
+    		<form class="form-inline my-2 my-lg-0">
+    		<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+    		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    	</ul>
+</div>
+
+<!--end of navbar-->
+
+
+<table style="width:897px; background:rgb(12, 11, 11); margin:0 auto;">
+<tr >    
+    <td width="1200" valign="top">
+    	<div id="welcome" style="border-right:#666666 1px dotted;"><h1>New Account Form</h1><br>
+    	    <table  align="center" bgcolor="white">
+		<tr>
+			
+		</tr>
+		<tr>
+			<td>
+				<form name=F1 onSubmit="return dil(this)" action="CreateServlet" >
+				  <table cellspacing="5" cellpadding="3">	
+				
+					<tr><td>User Name:</td><td> <input type="text" name="username"/></td></tr>
+					<tr><td>Password:</td><td> <input type="password" name="password"/></td></tr>
+					<tr><td>Confirm-Password:</td><td> <input type="password" name="repassword"/></td></tr>
+					<tr><td>Initial Deposit Amount:</td><td> <input type="text" name="amount"/></td></tr>
+					<!-- Gender:<br/><br/>
+					Male<input type="radio" name="gender" value="male"> Female<input type="radio" name="gender" value="female"/><br/><br/> -->
+					<tr><td>Street Name:</td><td> <input type="text" name="adderess"/></td></tr>
+					<tr><td>City:</td><td> <input type="text" name="adderess"/></td></tr>
+					<tr><td>State:</td><td> <input type="text" name="adderess"/></td></tr>
+					<tr><td>Zip:</td><td> <input type="text" name="adderess"/></td></tr>
+
+					<tr><td>Phone:</td><td> <input type="text" name="phone"/></td></tr>
+					<tr><td></td><td><input type="submit" value="Submit"/>
+					
+					<INPUT TYPE=RESET VALUE="CLEAR"></td></tr>
+					</table>
+               		</form>
+			</td>
+		</tr>
+	
+	</table>
+    	   </div>      
+    </td>
+          
+    </td>
+             	
+    
+</tr></table>
+<!--Footer-->
+<div id="footer_top">
+		<div id="footer_navigation">
+		  </div>
+		
+		<div id="footer_copyright" >
+				  © Copyright Sparks Team, 2019</div>
+			  </div>
+	  <!--end of footer-->
+	  <!-- Bootstrap core JavaScript
+			  ================================================== -->
+			  <!-- Placed at the end of the document so the pages load faster -->
+			  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+			  <script src="../../assets/js/vendor/popper.min.js"></script>
+			  <script src="../../dist/js/bootstrap.min.js"></script>
+		  </div>
+	  
+	  </body>
+	  </html>
