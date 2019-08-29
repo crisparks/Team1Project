@@ -14,8 +14,26 @@
 		<meta charset="ISO-8859-1">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
 		<title>Merit Banking Services</title>
+		
 	</head>
 	<body id='login'>
+	
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      
+    </div>
+  </nav>
+
+
+		<div class="jumbotron">
+  <h1 class="display-4">Welcome to Merit Banking Services!</h1>
+  <p class="lead">This is world's best banking service.</p>
+  <hr class="my-4">
+  
+ 
+</div>
 		<div class='container'>
 			<div><h1>Merit Banking Services</h1></div>
 			<div>
@@ -39,7 +57,8 @@
 					</fieldset>				
 				</form>
 			</div>
+					<form><input formaction='/user-test' type='submit' value='All Users'></form>
+			
 		</div>
-		<form><input formaction='/user-test' type='submit' value='All Users'></form>
 	</body>
 </html>
