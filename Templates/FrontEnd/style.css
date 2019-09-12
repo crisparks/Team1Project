@@ -22,7 +22,7 @@
     #header h2
     {
     font:bold italic 40px Arial, Helvetica, sans-serif;
-    color:#25485e;
+    color:#1A2E42;
     padding:20px 0 0 380px;
     }
     #navigation
@@ -30,7 +30,7 @@
     margin:0 10%;
     width:80%;
     height:40px;
-    background:#143244;
+    background-color:#143244;
     border:1px solid #282828;
     }
     .sticky
@@ -117,44 +117,111 @@
    
    #main_content
    {
-    min-height: 4000px;
-    width: 90%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
     
+   }
+   div.subcontents h1
+   {
+       text-align: center;
    }
    h1.content_header {
     font-size: 2.5vw;
+    
    }
-  
+   div.row1 
+   {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #4D85A8;
+   }
+   div.row1 div.image
+   {
+    display: inline-block;
+    width: 60%;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0;
+   }
+   div.row1 div.opacity
+   {
+    background-color: #4D85A8;
+    opacity: 0.65;
+   }
+   div.row2 
+   {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    background-color: #71CDE0;
+   }
+   div.row2 div.image
+   {
+    display: inline-block;
+    width: 60%;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0;
+   }
+   div.row2 div.opacity
+   {
+    background-color: #71CDE0;
+    opacity: 0.65;
+   }
+   div.row3 
+   {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #4D85A8;
+   }
+   div.row3 div.image
+   {
+    display: inline-block;
+    width: 60%;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0;
+   }
+   div.row3 div.opacity
+   {
+    background-color: #4D85A8;
+    opacity: 0.65;
+   }
    #advertisement{
-    min-height: 110px;
-    width: 75%;
+    min-height: 40px;
+    width: 100%;
     background-color: purple;
     margin: 40px auto;
-    margin-bottom: 10px;
-
-    
+    margin-bottom: 10px;    
+   }
+   #advertisement .copyright 
+   {
+    font:bold 15px/40px Arial, Helvetica, sans-serif;
    }
    .subcontents{
     height: 300px;
     min-width: 30%;
     border-style: solid;
-    border-color: #25485e;
+    border-color: #1A2E42;
     border-width: 1%;
     vertical-align: top;
     margin: 1% 1%;
     display: inline-block;
     padding: 1%;
    }
+   
 
 @media only screen and (max-width: 480px){
 .sm{
     min-height: 300px;
-    height: auot;
-    min-width: 70%;
+    height: auto;
+    min-width: 60%;
     border-style: solid;
-    border-color: #25485e;
+    border-color: #1A2E42;
     border-width: 1%;
+    background-color: white;
     margin: 2%;
     display: block;
     }
@@ -178,8 +245,22 @@
         display: none;
     }
     h1.content_header {
-        font-size: 10px;
+        font-size: 30px;
        }
+       #navigation form input 
+    {
+        height: 25px;
+        width: 40%;
+        border-radius: 10px;
+        min-width: 140px;
+    }
+    #formcontainer 
+    {
+        float: right;
+        height: 40px;
+        width: 75%;
+        
+    }
 }
 @media only screen and (min-width: 481px){
 .md{
@@ -188,8 +269,9 @@
     min-width: 45%;
     max-width: 45%;
     border-style: solid;
-    border-color: #25485e;
+    border-color: #1A2E42;
     border-width: 1%;
+    background-color: white;
     vertical-align: top;
     margin: 2%;
     display: inline-block;
@@ -217,6 +299,19 @@
     h1.content_header {
         font-size: 4vw;
        }
+       #navigation form input 
+    {
+        height: 25px;
+        width: 75%;
+        border-radius: 10px;
+        min-width: 200px;
+    }
+    #formcontainer 
+    {
+        float: right;
+        height: 40px;
+        width: 80%;
+    }
    
 }
 @media only screen and (min-width: 1024px){
@@ -224,10 +319,11 @@
     min-height: 300px;
     height: auto;
     min-width: 30%;
-    max-width: 30%;
+    max-width: 40%;
     border-style: solid;
-    border-color: #25485e;
+    border-color: #1A2E42;
     border-width: 1%;
+    background-color: white;
     vertical-align: top;
     margin: 1%;
     display: inline-block;
@@ -259,5 +355,18 @@
     h1.content_header {
         font-size: 2.5vw;
        }
+       #navigation form input 
+    {
+        height: 25px;
+        width: 75%;
+        border-radius: 10px;
+        min-width: 200px;
+    }
+    #formcontainer 
+    {
+        float: right;
+        height: 40px;
+        width: 40%;
+    }
 
 }
