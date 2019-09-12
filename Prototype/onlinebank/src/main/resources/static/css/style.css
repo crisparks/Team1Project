@@ -1,0 +1,372 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+   }
+
+   #header
+    {
+    margin:0 auto;
+    width:897px;
+    height: 10%;
+    
+    }
+    img 
+    {
+        display: block;
+        width: 80%;
+        max-width: 600px;
+        margin: 5px auto;
+        height: auto;
+    }
+    #header h2
+    {
+    font:bold italic 40px Arial, Helvetica, sans-serif;
+    color:#1A2E42;
+    padding:20px 0 0 380px;
+    }
+    #navigation
+    {
+    margin:0 10%;
+    width:80%;
+    height:40px;
+    background-color:#143244;
+    border:1px solid #282828;
+    }
+    .sticky
+    {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .sticky + #wrapper
+    {
+        padding-top: 60px;
+}
+    #navigation ul
+    {
+    list-style:none;
+    }
+    #navigation ul li
+    {
+    color:#c4c4c4;
+    float:left;
+    text-align:center;
+    font:bold 15px/40px Arial, Helvetica, sans-serif;
+    width: 15%;
+    border-right:1px solid #282828;
+    }
+    #navigation ul li a
+    {
+    text-decoration:none;
+    display: inline-block;
+    color:#e9e9e9;
+    }
+    #navigation ul li a:hover
+    {
+    color:#FFFFFF;
+    }
+    #navigation ul li.last
+    {
+    border:none;
+    float:left;
+    }
+    #formcontainer 
+    {
+        float: right;
+        height: 40px;
+        width: 40%;
+    }
+    #navigation form
+    {
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 5px;
+    
+    
+    }
+    #navigation button 
+    {
+        margin-top: 0px;
+        padding-top: 3px;
+    }
+    div.bar 
+    {
+    width: 35px;
+    height: 4px;
+    background-color: #e9e9e9;
+    margin: 5px 0;
+    }
+    #navigation form input 
+    {
+        height: 25px;
+        width: 75%;
+        border-radius: 10px;
+        min-width: 200px;
+    }
+    #navigation form button
+    {
+        border-radius: 3px;
+    }
+    #wrapper 
+    {
+        text-align: center;
+        padding: 0px;
+        width: 100%;
+    }
+   
+   #main_content
+   {
+    width: 100%;
+    text-align: left;
+    
+   }
+   div.subcontents h1
+   {
+       text-align: center;
+   }
+   h1.content_header {
+    font-size: 2.5vw;
+    
+   }
+   div.row1 
+   {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #4D85A8;
+   }
+   div.row1 div.image
+   {
+    display: inline-block;
+    width: 60%;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0;
+   }
+   div.row1 div.opacity
+   {
+    background-color: #4D85A8;
+    opacity: 0.65;
+   }
+   div.row2 
+   {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    background-color: #71CDE0;
+   }
+   div.row2 div.image
+   {
+    display: inline-block;
+    width: 60%;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0;
+   }
+   div.row2 div.opacity
+   {
+    background-color: #71CDE0;
+    opacity: 0.65;
+   }
+   div.row3 
+   {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #4D85A8;
+   }
+   div.row3 div.image
+   {
+    display: inline-block;
+    width: 60%;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0;
+   }
+   div.row3 div.opacity
+   {
+    background-color: #4D85A8;
+    opacity: 0.65;
+   }
+   #advertisement{
+    min-height: 40px;
+    width: 100%;
+    background-color: purple;
+    margin: 40px auto;
+    margin-bottom: 10px;    
+   }
+   #advertisement .copyright 
+   {
+    font:bold 15px/40px Arial, Helvetica, sans-serif;
+   }
+   .subcontents{
+    height: 300px;
+    min-width: 30%;
+    border-style: solid;
+    border-color: #1A2E42;
+    border-width: 1%;
+    vertical-align: top;
+    margin: 1% 1%;
+    display: inline-block;
+    padding: 1%;
+   }
+   
+
+@media only screen and (max-width: 480px){
+.sm{
+    min-height: 300px;
+    height: auto;
+    min-width: 60%;
+    border-style: solid;
+    border-color: #1A2E42;
+    border-width: 1%;
+    background-color: white;
+    margin: 2%;
+    display: block;
+    }
+    #main_content{
+    width: 97%;
+    margin: 10px auto;
+    display: block;
+    padding-top: 2%;
+    }
+    #navigation ul
+    {
+        display: none;
+    }
+    div.w3-dropdown-hover
+    {
+        display: block;
+        
+    }
+    #header h2 
+    {
+        display: none;
+    }
+    h1.content_header {
+        font-size: 30px;
+       }
+       #navigation form input 
+    {
+        height: 25px;
+        width: 40%;
+        border-radius: 10px;
+        min-width: 140px;
+    }
+    #formcontainer 
+    {
+        float: right;
+        height: 40px;
+        width: 75%;
+        
+    }
+}
+@media only screen and (min-width: 481px){
+.md{
+    min-height: 300px;
+    height: auto;
+    min-width: 45%;
+    max-width: 45%;
+    border-style: solid;
+    border-color: #1A2E42;
+    border-width: 1%;
+    background-color: white;
+    vertical-align: top;
+    margin: 2%;
+    display: inline-block;
+    }
+    #main_content{
+        width: 97%;
+        margin: 10px auto;
+        display: block;
+    }
+    #navigation ul{
+    display: none;
+    }
+    div.w3-dropdown-hover
+    {
+        display: block;
+    }
+    #formcontainer
+    {
+        width: 75%;
+    }
+    #header h2 
+    {
+        display: none;
+    }
+    h1.content_header {
+        font-size: 4vw;
+       }
+       #navigation form input 
+    {
+        height: 25px;
+        width: 75%;
+        border-radius: 10px;
+        min-width: 200px;
+    }
+    #formcontainer 
+    {
+        float: right;
+        height: 40px;
+        width: 80%;
+    }
+   
+}
+@media only screen and (min-width: 1024px){
+.lg{
+    min-height: 300px;
+    height: auto;
+    min-width: 30%;
+    max-width: 40%;
+    border-style: solid;
+    border-color: #1A2E42;
+    border-width: 1%;
+    background-color: white;
+    vertical-align: top;
+    margin: 1%;
+    display: inline-block;
+    }
+    #main_content{
+    width: 75%;
+    display: inline-block;
+    margin: 10px;
+    }
+    #navigation{
+    display: inline-block;
+    }
+    #navigation ul
+    {
+        display: block;
+    }
+    div.w3-dropdown-hover
+    {
+        display: none;
+    }
+    #formcontainer
+    {
+        width: 40%;
+    }
+    #header h2 
+    {
+        display: block;
+    }
+    h1.content_header {
+        font-size: 2.5vw;
+       }
+       #navigation form input 
+    {
+        height: 25px;
+        width: 75%;
+        border-radius: 10px;
+        min-width: 200px;
+    }
+    #formcontainer 
+    {
+        float: right;
+        height: 40px;
+        width: 40%;
+    }
+
+}
