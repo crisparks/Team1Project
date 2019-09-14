@@ -116,8 +116,8 @@
     }
    
    #main_content
-   {
     width: 100%;
+   {
     text-align: left;
     
    }
@@ -211,7 +211,20 @@
     display: inline-block;
     padding: 1%;
    }
-   
+  
+   .dsubcontents{
+    height: 300px;
+    min-width: 30%;
+    border-style: solid;
+    border-color: #1A2E42;
+    border-width: 1%;
+    vertical-align: top;
+    margin: 1% 1%;
+    display: inline-block;
+    padding: 1%;
+	overflow-x: hidden;
+	overflow-y: auto;
+   }
 
 @media only screen and (max-width: 480px){
 .sm{
@@ -318,7 +331,7 @@
 .lg{
     min-height: 300px;
     height: auto;
-    min-width: 30%;
+    min-width: 40%;
     max-width: 40%;
     border-style: solid;
     border-color: #1A2E42;
@@ -370,3 +383,60 @@
     }
 
 }
+
+.dlg{
+    min-height: 300px;
+    height: auto;
+    min-width: 48%;
+    max-width: 48%;
+    border-style: solid;
+    border-color: #1A2E42;
+    border-width: 1%;
+    background-color: white;
+    vertical-align: top;
+    margin: 1%;
+    display: inline-block;
+    }
+    #main_content{
+    width: 75%;
+    display: inline-block;
+    margin: 10px;
+    }
+    #navigation{
+    display: inline-block;
+    }
+    #navigation ul
+    {
+        display: block;
+    }
+    div.w3-dropdown-hover
+    {
+        display: none;
+    }
+    #formcontainer
+    {
+        width: 40%;
+    }
+    #header h2 
+    {
+        display: block;
+    }
+    h1.content_header {
+        font-size: 2.5vw;
+       }
+       #navigation form input 
+    {
+        height: 25px;
+        width: 75%;
+        border-radius: 10px;
+        min-width: 200px;
+    }
+    #formcontainer 
+    {
+        float: right;
+        height: 40px;
+        width: 40%;
+    }
+
+}
+
