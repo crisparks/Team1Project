@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -44,7 +47,7 @@
             </div>
          </div>
          <div id="wrapper">
-		    <h1 class="content_header">Welcome, ${user.getFirstName()}</h1>
+		    <h1 class="content_header">Welcome, ${dm.user.getFirstName()}</h1>
             <div id="main_content">
                <div class="row1">
 			   <!-- Top Left BOX-->
@@ -60,21 +63,19 @@
 							  </tr>
 							</thead>
 							<tr>
-							  <td>Cristo</td>  <!-- ${user.getFirstName()} -->
-							  <td>Sparks</td>  <!-- ${user.getLastName()} -->
-							  <td>Crisparks@hotmai.com</td>  <!-- ${dm.user.getEmail()} -->
-							  <td>656 Florborn Road 75061 Dallas, Texas </td>  <!-- ${dm.user.getAddress().getCity()}, ${dm.user.getAddress().getState()} -->
+							  <td>${dm.user.getFirstName()}</td>  <!-- User First Name -->
+							  <td>${dm.user.getLastName()}</td>  <!-- User Last Name -->
+							  <td>${dm.user.getEmail()}</td>  <!-- User Email -->
+							  <td>${dm.user.getAddress().getCity()}, ${dm.user.getAddress().getState()} </td>  <!-- User Email -->
 							</tr>
 						  </table>
 					  </div>
-					  Open Account Placeholder
-					  <!--
 					  <div id="open-acct-view">			
 						<form:form id='newacct' method='post' modelAttribute="dm.nafo">
 							<fieldset class='fieldset-auto-width'>
 								<legend>New Account</legend>
-								<table><tbody>
-									<tr>
+								<table class= "w3-table-all w3-hoverable"><tbody>
+									<tr class= "w3-light-grey">
 										<td>Account Type:</td>
 										<td>
 											<form:select  path="acctType" required="true">
@@ -97,7 +98,6 @@
 							</fieldset>	
 						</form:form>			
 					</div>
-					-->
                   </div>
 				  <!-- Top right box-->
                 <div class="dsubcontents dlg md sm">
@@ -111,14 +111,12 @@
 							  </tr>
 							</thead>
 							<tr>
-							  <td>6565114225</td> <!-- ${dm.acct.user.getAccounts()} -->
-							  <td>Checking</td>   <!-- ${dm.acct.getAccountType().getTypeName()}  -->
-							  <th>50,000</th>     <!-- ${dm.acct.getBalance()} -->
-							  <th>2.6%</th>       <!-- ${dm.acct.getRate()} -->
+							  <td>${dm.acct.user.getAccounts()}</td> 
+							  <td>${dm.acct.getAccountType().getTypeName()}</td>  
+							  <th>${dm.acct.getBalance()}</th>     
+							  <th>${dm.acct.getRate()}</th>       
 							</tr>
 						</table>
-					<h1 class="content_header">Transaction Placeholder</h1>
-				  <!--
                      <form:form id='transaction' method='post' modelAttribute="tfo">
 						<fieldset class='fieldset-auto-width'>
 						<legend>Transaction</legend>
@@ -127,7 +125,7 @@
 									<c:if test="${failed==true}">
 										<tr><td>${error}</td></tr>
 									</c:if>
-									<tr>
+									<tr class="w3-light-grey" >
 										<td>${account}</td>
 										<td>									
 											<form:select  path="target" required="true">
@@ -139,8 +137,7 @@
 										</td>
 										<td>
 											<span class="dollar-sign">$</span>
-											<form:input id="amount-input" type="number" step="0.01" path="amount">
-											</form:input>
+											<form:input id="amount-input" type="number" step="0.01" path="amount"></form:input>
 										</td>	
 									</tr>
 									<tr>
@@ -150,7 +147,6 @@
 							</table>						
 						</fieldset>	
 					</form:form>
-					-->
 				  </div>
                </div>
                <div class="row2">
@@ -165,68 +161,18 @@
 							<th>Rate (%)</th>
 						  </tr>
 						</thead>
-						
-						<!-- 
 							<c:forEach items="${dm.user.getAccounts()}" var="acct">
-
 							<tr onclick="updateAcctView(${acct.getId()});">
-
 								<td>${acct.getAccountNumber()}</td>
-
 								<td>${acct.getAccountType().getTypeName()}</td>
-
 								<th>${acct.getBalance()}</th>
-
 								<th>${acct.getRate()}</th>
-
 							</tr>
-
 							</c:forEach>
-						-->
-						<tr>
-						  <td>6565114225</td> <!-- ${acct.user.getAccounts()} -->
-						  <td>Checking</td>   <!-- ${acct.getAccountType().getTypeName()}  -->
-						  <th>50,000</th>     <!-- ${acct.getBalance()} -->
-						  <th>2.6%</th>       <!-- ${acct.getRate()} -->
-						</tr>
-						<tr>
-						  <td>Eve</td>
-						  <td>Jackson</td>
-						  <td>94</td>
-						  <th>Points</th>
-						</tr>
-						<tr>
-						  <td>Adam</td>
-						  <td>Johnson</td>
-						  <td>67</td>
-						  <th>Points</th>
-						</tr>
-						<tr>
-						  <td>Adam</td>
-						  <td>Johnson</td>
-						  <td>67</td>
-						  <th>Points</th>
-						</tr>
 					  </table>
 				</div>
 					<!--Bottom right -->
                   <div class="dsubcontents dlg md sm">
-					 <table class="w3-table-all w3-hoverable">
-						<thead>
-						  <tr class="w3-light-grey">
-							<th>Account</th>
-							<th>Transfer Amount</th>
-							<th>Account</th>
-							<th>Date</th>
-						  </tr>
-						</thead>
-						<tr>
-						  <td>666516</td>
-						  <th>$35,000</th>
-						  <td>752036</td>
-						  <td>10/01/2019</td>
-						</tr>
-					  </table>
                       <h1 class="content_header">Log Box</h1>
                   </div>
                </div>
@@ -263,8 +209,7 @@
          }
          }
 		 
-		 //Needed code?
-		 /*function updateAcctView($val) {
+		 function updateAcctView($val) {
 		        $.ajax({
 		            type: "GET",  
 		            url: "/acctView/" + $val,
@@ -272,7 +217,7 @@
 		                $("#account-view").html( response );
 		            }
 		        });
-		    } */ 
+		    }  
       </script>
    </body>
 </html>
