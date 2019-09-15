@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page isErrorPage="true"%>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -68,8 +69,9 @@
 							  <td>${dm.user.getAddress().getCity()}, ${dm.user.getAddress().getState()} </td>  <!-- User Email -->
 							</tr>
 						  </table>
+						
 					  </div>
-					  <div id="open-acct-view">			
+					  <div class = "w3-respnsive">			
 						<form:form id='newacct' method='post' modelAttribute="dm.nafo">
 							<fieldset class='fieldset-auto-width'>
 								<legend>New Account</legend>
@@ -100,6 +102,7 @@
                   </div>
 				  <!-- Top right box-->
                 <div class="dsubcontents dlg md sm">
+					<div class = "w3-respnsive">
 						<table class="w3-table-all w3-hoverable">
 							<thead>
 							  <tr class="w3-light-grey">
@@ -110,44 +113,62 @@
 							  </tr>
 							</thead>
 							<tr>
-							  <td>${dm.acct.user.getAccounts()}</td> 
-							  <td>${dm.acct.getAccountType().getTypeName()}</td>  
-							  <th>${dm.acct.getBalance()}</th>     
-							  <th>${dm.acct.getRate()}</th>       
+							  <td>${dm.account.getAccountNumber()}</td> 
+							  <td>${dm.account.getAccountType().getTypeName()}</td>  
+							  <th>${dm.account.getBalance()}</</th>     
+							  <th>${dm.account.getRate()}</th>       
 							</tr>
 						</table>
-                     <form:form id='transaction' method='post' modelAttribute="tfo">
-						<fieldset class='fieldset-auto-width'>
-						<legend>Transaction</legend>
-							<table class="w3-table-all w3-hoverable">
-								<tbody>
-									<c:if test="${failed==true}">
-										<tr><td>${error}</td></tr>
-									</c:if>
-									<tr class="w3-light-grey" >
-										<td>${account}</td>
-										<td>									
-											<form:select  path="target" required="true">
-												<form:option value="">Select Target</form:option>
-												<c:forEach items="${accounts}" var="a">
-													<form:option value="${a.getId()}">${a.toString()}</form:option>
-												</c:forEach>
-											</form:select>								
-										</td>
-										<td>
-											<span class="dollar-sign">$</span>
-											<form:input id="amount-input" type="number" step="0.01" path="amount"></form:input>
-										</td>	
-									</tr>
-									<tr>
-										<td colspan="2"><input formaction='/createAccount' type='submit' value='Open Account'/></td>
-									</tr>
-								</tbody>
-							</table>						
-						</fieldset>	
-					</form:form>
-				  </div>
-               </div>
+						</div>
+					<div class = "w3-respnsive">
+						<form:form id='transaction' method='post' modelAttribute="dm.tfo">
+							<form:input type="hidden" path="tAcct"
+							value="${dm.account.getAccountNumber()}"></form:input>
+							<fieldset class='fieldset-auto-width'>
+								<legend>Transaction</legend>
+								<table class="w3-table-all w3-hoverable">
+									<thead>
+										<tr class="w3-light-grey">
+											<th>Type</th>
+											<th>To/From</th>
+											<th>Amount</th>
+										</tr>
+									</thead>
+									<tbody>
+										<c:if test="${dm.isFailed()==true}">
+											<tr>
+												<td>${dm.error()}</td>
+											</tr>
+										</c:if>
+										<tr>
+											<td><form:select path="tType" required="true">
+													<option value="">Transaction Type</option>
+													<c:forEach items="${dm.getTransactionTypes()}" var="t">
+														<form:option value="${t}">${t}</form:option>
+													</c:forEach>
+												</form:select></td>
+											<td><form:select path="oAcct" required="true">
+													<form:option value="">Select</form:option>
+													<c:forEach items="${dm.user.getAccounts()}" var="a">
+														<form:option value="${a.getId()}">${a.toString()}</form:option>
+													</c:forEach>
+												</form:select></td>
+											<td><span class="dollar-sign">$</span>
+											<form:input id="amount-input" type="number" step="0.01"
+													path="amount"></form:input></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td><input formaction='/transaction' type='submit'
+												value='GO' /></td>
+										</tr>
+									</tbody>
+								</table>
+							</fieldset>
+						</form:form>
+						</div>
+					</div>
+				</div>
                <div class="row2">
 			   <!-- Bottom left box-->
                   <div class="dsubcontents dlg md sm">
@@ -161,12 +182,12 @@
 						  </tr>
 						</thead>
 							<c:forEach items="${dm.user.getAccounts()}" var="acct">
-							<tr onclick="updateAcctView(${acct.getId()});">
-								<td>${acct.getAccountNumber()}</td>
-								<td>${acct.getAccountType().getTypeName()}</td>
-								<th>${acct.getBalance()}</th>
-								<th>${acct.getRate()}</th>
-							</tr>
+								<tr onclick="updateAcctView(${acct.getId()});">
+									<td>${acct.getAccountNumber()}</td>
+									<td>${acct.getAccountType().getTypeName()}</td>
+									<th>${acct.getBalance()}</th>
+									<th>${acct.getRate()}</th>
+								</tr>
 							</c:forEach>
 					  </table>
 				</div>
