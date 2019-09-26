@@ -12,6 +12,7 @@ body {
 }
 
 /* Style inputs */
+
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -90,16 +91,13 @@ input[type=submit]:hover {
         <input type="text" id="name" name="name" placeholder="Your first and last name..">
         <label for="email">Email</label>
         <input type="text" id="email" email="email" placeholder="Your email address..">
-        <label for="state">State</label>
-        <select id="state" name="state">
-          <option value="texas">Texas</option>
-          <option value="atlanta">Atlanta</option>
-          <option value="washington">Washington</option>
-        </select>
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px"></textarea>
         <input type="submit" value="Submit">
       </form>
+      <br></br>
+      <br></br>
+      <br></br>
     </div>
   </div>
 </div>
