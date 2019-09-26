@@ -92,9 +92,9 @@ input[type=submit]:hover {
         <input type="text" id="email" email="email" placeholder="Your email address..">
         <label for="state">State</label>
         <select id="state" name="state">
-          <option value="australia">Texas</option>
-          <option value="canada">Atlanta</option>
-          <option value="usa">Washington</option>
+          <option value="texas">Texas</option>
+          <option value="atlanta">Atlanta</option>
+          <option value="washington">Washington</option>
         </select>
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:120px"></textarea>
