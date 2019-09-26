@@ -13,7 +13,7 @@
     <h3>About Us</h3>
     <p><strong></strong>Team 3.</p>
     <p>Team Lead: Cristo Sparks.</p>
-    <p>Members: Joe, Liz, Joseph, Zhenli.</p>
+    <p>Members: Joe, Joseph, Zhenli, Liz.</p>
 
     </div>
 </tr>
