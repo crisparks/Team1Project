@@ -1,0 +1,23 @@
+.inline {
+	display: inline;
+}
+
+.alert {
+	color: white;
+	background-color: red;
+}
+
+#logo {
+	width: 400px;
+}
+
+.fieldset-auto-width {
+	margin-top: 30px;
+     display: inline-block;
+     border: 2px solid #143244;
+}
+
+.bbb {
+	border: none;
+	background-color: none;
+}
